@@ -1,0 +1,32 @@
+Everett Hu
+everetth
+
+Welcome to Button Mashing!
+
+The objective of this game is to kill all mobs before
+they hit you. Upon touching a mob, you will take damage depending
+on the size of the mob. Kill everything before getting killed.
+
+Controls:
+A - Move Left
+D - Move Right
+Q - Attack(0 Charge)
+E - Fire Projectile(40 Charge)
+R - Fire Special(100 Charge)
+
+` - Close game(Required to close game properly)
+M - Return to settings
+
+
+Attacking will grant charge per hit, specials 
+will heal a small amount of health.
+
+----------------------------------------------------------------
+
+
+In this program I used classes as an easier way to
+create and animate the objects.
+
+I assigned variables and functions to each object,
+calling each one as needed, making it easier to work
+with animating each object.
