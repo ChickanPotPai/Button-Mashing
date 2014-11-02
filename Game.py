@@ -124,7 +124,7 @@ class Avatar():
         
     def attack(self): ## Basic attack for avatar
         if(self.avatarY == 450):
-            punch = PhotoImage(file = 'effect_punch.gif')
+            punch = PhotoImage(file = 'images/effect_punch.gif')
             tempPunch = self.avatarCanvas.create_image(self.avatarX + 190, \
                                                        self.avatarY + 20, anchor = NW, image = punch)
             self.avatarCanvas.update()
@@ -158,7 +158,7 @@ class Avatar():
                                                      anchor = NW, image = projectile, tag = self.projectileTag)
                 self.avatarCanvas.update()
     
-            projectile = PhotoImage(file = 'effect_projectile.gif')
+            projectile = PhotoImage(file = 'images/effect_projectile.gif')
             
             while(self.projectileX < 1100):
                 draw()
@@ -184,7 +184,7 @@ class Avatar():
             self.specialX = self.avatarX - 500
             self.specialY = self.avatarY - 450
     
-            nuke = PhotoImage(file = 'effect_nuke.gif')
+            nuke = PhotoImage(file = 'images/effect_nuke.gif')
             tempNuke = self.avatarCanvas.create_image(self.specialX, self.specialY, \
                                                             anchor = NW, image = nuke)
             self.specialHit()
@@ -340,7 +340,7 @@ class smallEnemy(Mob):
         self.mobHealthY2 = self.mobY - 10
         self.tag = 'mob'
         self.mobHealthTag = 'mobHP'
-        self.mobPicture = PhotoImage(file = "mob_small.gif")
+        self.mobPicture = PhotoImage(file = "images/mob_small.gif")
         
         mainAvatar.avatarCanvas.create_image(self.mobX, self.mobY, \
                                              anchor = NW, image = self.mobPicture, tag = self.tag)
@@ -385,7 +385,7 @@ class mediumEnemy(Mob):
         self.mobHealthY2 = self.mobY - 10
         self.tag = 'mob'
         self.mobHealthTag = 'mobHP'
-        self.mobPicture = PhotoImage(file = "mob_medium.gif")
+        self.mobPicture = PhotoImage(file = "images/mob_medium.gif")
         
         mainAvatar.avatarCanvas.create_image(self.mobX, self.mobY, \
                                              anchor = NW, image = self.mobPicture, tag = self.tag)
@@ -432,7 +432,7 @@ class bigEnemy(Mob):
         self.tag = 'mob'
         self.mobHealthTag = 'mobHP'
         mobSpawn = [0,1,0,1,0]
-        self.mobPicture = PhotoImage(file = "mob_big.gif")
+        self.mobPicture = PhotoImage(file = 'images/mob_big.gif')
         
         mainAvatar.avatarCanvas.create_image(self.mobX, self.mobY, \
                                              anchor = NW, image = self.mobPicture, tag = self.tag)
@@ -481,7 +481,7 @@ class bossEnemy(Mob):
         self.tag = 'mob'
         self.mobHealthTag = 'mobHP'
         mobSpawn = [0,1,0,1,0]
-        self.mobPicture = PhotoImage(file = "mob_boss.gif")
+        self.mobPicture = PhotoImage(file = 'images/mob_boss.gif')
         
         mainAvatar.avatarCanvas.create_image(self.mobX, self.mobY, \
                                              anchor = NW, image = self.mobPicture, tag = self.tag)
@@ -545,12 +545,12 @@ def winGame():
     endCanvas = Canvas(endRoot, width = 800, height = 600)
     endCanvas.pack()
 
-    winImage = PhotoImage(file = "end_win.gif")
+    winImage = PhotoImage(file = 'images/end_win.gif')
     endCanvas.create_image(0,0, anchor = NW, image = winImage)
 
-    widgetDict["restartText"] = Label(endRoot, text = "Restart - R")
+    widgetDict["restartText"] = Label(endRoot, text = 'Restart - R')
     widgetDict["restartText"].place(x = 10, y = 560)
-    widgetDict["quitText"] = Label(endRoot, text = "Quit - Q")
+    widgetDict["quitText"] = Label(endRoot, text = 'Quit - Q')
     widgetDict["quitText"].place(x = 730, y = 560)
     
     endRoot.bind('<Key>', winFunctions)
@@ -576,7 +576,7 @@ def loseGame():
     endCanvas = Canvas(endRoot, width = 800, height = 600)
     endCanvas.pack()
 
-    loseImage = PhotoImage(file = "end_gameover.gif")
+    loseImage = PhotoImage(file = 'images/end_gameover.gif')
     endCanvas.create_image(0,0, anchor = NW, image = loseImage)
 
     widgetDict["restartText"] = Label(endRoot, text = "Restart - R")
@@ -700,27 +700,27 @@ def run():
     ## Sets game map and game avatars
         
     if(gameMap == 1):
-        plains = PhotoImage(file = "map_plains.gif")
+        plains = PhotoImage(file = 'images/map_plains.gif')
         widgetDict["canvas"].create_image(0, 0, anchor = NW, image = plains)
         
     elif(gameMap == 2):
-        barren = PhotoImage(file = "map_barren.gif")
+        barren = PhotoImage(file = 'images/map_barren.gif')
         widgetDict["canvas"].create_image(0, 0, anchor = NW, image = barren)
         
     elif(gameMap == 3):
-        beach = PhotoImage(file = "map_beach.gif")
+        beach = PhotoImage(file = 'images/map_beach.gif')
         widgetDict["canvas"].create_image(0, 0, anchor = NW, image = beach)
 
     if(gameAvatar == 1):
-        pie = PhotoImage(file = "avatar_pie.gif")
+        pie = PhotoImage(file = 'images/avatar_pie.gif')
         mainAvatar = Avatar(widgetDict["canvas"], pie, cheats,'pie')
 
     elif(gameAvatar == 2):
-        zombie = PhotoImage(file = "avatar_zombie.gif")
+        zombie = PhotoImage(file = 'images/avatar_zombie.gif')
         mainAvatar = Avatar(widgetDict["canvas"], zombie, cheats,'zombie')
 
     elif(gameAvatar == 3):
-        jigglypuff = PhotoImage(file = "avatar_jigglypuff.gif")
+        jigglypuff = PhotoImage(file = 'images/avatar_jigglypuff.gif')
         mainAvatar = Avatar(widgetDict["canvas"], jigglypuff, cheats,'jigglypuff')
 
 
